@@ -31,7 +31,7 @@
 
     <div class="row">
         @foreach ($votadas as $receta)
-            @include('ui.receta'
+            @include('ui.receta')
         @endforeach
     </div>
 </div>
