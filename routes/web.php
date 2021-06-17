@@ -27,6 +27,10 @@ Route::get('/recetas/{receta}/edit', 'App\Http\Controllers\RecetaController@edit
 Route::put('/recetas/{receta}', 'App\Http\Controllers\RecetaController@update')->name('recetas.update');
 Route::delete('/recetas/{receta}', 'App\Http\Controllers\RecetaController@destroy')->name('recetas.destroy');
 
+Route::get('/categoria/{categoriaReceta}', 'App\Http\Controllers\CategoriasController@show')->name('categorias.show');
+
+Route::get('/buscar', 'App\Http\Controllers\RecetaController@search')->name('buscar.show');
+
 Route::get('/perfiles/{perfil}', 'App\Http\Controllers\PerfilController@show')->name('perfiles.show');
 Route::get('/perfiles/{perfil}/edit', 'App\Http\Controllers\PerfilController@edit')->name('perfiles.edit');
 Route::put('/perfiles/{perfil}', 'App\Http\Controllers\PerfilController@update')->name('perfiles.update');
